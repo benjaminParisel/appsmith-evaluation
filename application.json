@@ -1,6 +1,10 @@
 {
   "pages": [
     {
+      "id": "Investors",
+      "isDefault": false
+    },
+    {
       "id": "Page1",
       "isDefault": true
     }
