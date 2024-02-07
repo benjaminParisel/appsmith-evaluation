@@ -6,6 +6,7 @@
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.5c9511142b3624c7491c5442e8ccd0ef.svg",
     "topRow": 26,
     "pageSize": 3,
+    "onPageChange": "",
     "type": "LIST_WIDGET_V2",
     "itemSpacing": 8,
     "animateLoading": true,
@@ -16,9 +17,11 @@
         {"key": "primaryKeys"},
         {"key": "accentColor"},
         {"key": "borderRadius"},
-        {"key": "boxShadow"}
+        {"key": "boxShadow"},
+        {"key": "listData"}
     ],
     "leftColumn": 5,
+    "serverSidePagination": false,
     "enhancements": true,
     "children": [{
         "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
@@ -26,7 +29,7 @@
         "widgetName": "Canvas1",
         "displayName": "Canvas",
         "topRow": 0,
-        "bottomRow": 400,
+        "bottomRow": 600,
         "parentRowSpace": 1,
         "type": "CANVAS_WIDGET",
         "canExtend": false,
@@ -67,6 +70,7 @@
     "itemBackgroundColor": "#FFFFFF",
     "accentColor": "{{appsmith.theme.colors.primaryColor}}",
     "isVisible": true,
+    "totalRecordsCount": "",
     "tags": [
         "Suggested",
         "Display"
@@ -85,36 +89,22 @@
     "currentItemsView": "{{[]}}",
     "triggeredItemView": "{{{}}}",
     "widgetName": "List1",
-    "listData": [
-        {
-            "img": "https://assets.appsmith.com/widgets/default.png",
-            "name": "Blue",
-            "id": "001"
-        },
-        {
-            "img": "https://assets.appsmith.com/widgets/default.png",
-            "name": "Green",
-            "id": "002"
-        },
-        {
-            "img": "https://assets.appsmith.com/widgets/default.png",
-            "name": "Red",
-            "id": "003"
-        }
-    ],
+    "listData": "{{pokemons.data.results}}",
+    "dynamicPropertyPathList": [],
     "displayName": "List",
-    "bottomRow": 66,
+    "bottomRow": 86,
     "parentRowSpace": 10,
     "hideCard": false,
     "mobileRightColumn": 29,
     "mainContainerId": "o2rfx2ybvu",
-    "primaryKeys": "{{List1.listData.map((currentItem, currentIndex) => currentItem[\"id\"] )}}",
+    "primaryKeys": "{{List1.listData.map((currentItem, currentIndex) => currentItem[\"name\"] )}}",
     "parentColumnSpace": 18.265625,
+    "dynamicTriggerPathList": [{"key": "onPageChange"}],
     "gridType": "vertical",
     "key": "pgcwrik5kd",
     "backgroundColor": "transparent",
     "isDeprecated": false,
-    "rightColumn": 29,
+    "rightColumn": 62,
     "widgetId": "ld39rcvn42",
     "minWidth": 450,
     "parentId": "0",

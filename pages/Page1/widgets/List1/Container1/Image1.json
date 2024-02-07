@@ -13,14 +13,14 @@
     "dynamicTriggerPathList": [],
     "imageShape": "RECTANGLE",
     "dynamicBindingPathList": [
-        {"key": "image"},
-        {"key": "borderRadius"}
+        {"key": "borderRadius"},
+        {"key": "image"}
     ],
     "leftColumn": 0,
     "defaultImage": "https://assets.appsmith.com/widgets/default.png",
     "flexVerticalAlignment": "start",
     "key": "72cx9wz1se",
-    "image": "{{currentItem.img}}",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{currentIndex + 1}}.png",
     "isDeprecated": false,
     "rightColumn": 16,
     "objectFit": "cover",
